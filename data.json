@@ -1,0 +1,29 @@
+{
+  "dueDate": "Fecha actual: Date.now()",
+  "personDocument": "1053811422",
+  "status": "Payable",
+  "line": {
+    "amount": 500,
+    "detailType": "ExpenseDetail",
+    "expenseDetail": {
+      "customer": {
+        "value": "ABC123",
+        "name": "Sample Customer",
+        "ref": {
+          "value": "DEF234",
+          "name": "Sample Construction"
+        }
+      },
+      "account": {
+        "value": "EFG345",
+        "name": "Fuel"
+      },
+      "lineStatus": "Billable"
+    }
+  },
+  "vendor": {
+    "value": "GHI456",
+    "name": "Sample Bank"
+  },
+  "totalAmount": 1990.19
+}

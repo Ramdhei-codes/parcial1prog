@@ -1,0 +1,59 @@
+###
+GET http://localhost:3000/api/v1/bills HTTP/1.1
+###
+POST http://localhost:3000/api/v1/bills/bill HTTP/1.1
+Content-Type: application/json
+
+{
+  "dueDate": "20-12-2021",
+  "personDocument": "1233811422",
+  "status": "Payable",
+  "line": {
+    "amount": 5000,
+    "detailType": "OtherDetail",
+    "expenseDetail": {
+      "customer": {
+        "value": "ABC134",
+        "name": "Juana López",
+        "ref": {
+          "value": "DEF214",
+          "name": "Sample Construction"
+        }
+      },
+      "account": {
+        "value": "EFG345",
+        "name": "Fuel"
+      },
+      "lineStatus": "Billable"
+    }
+  },
+  "vendor": {
+    "value": "GHI456",
+    "name": "Sample Bank"
+  },
+  "totalAmount": 1990.19
+}
+###
+GET http://localhost:3000/api/v1/bills/DEF234 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/bills/622f76c55219733b3c507ce0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "line": {
+      "expenseDetail": {
+        "customer": {
+          "value": "BCD999",
+          "name": "José Álvarez"
+        }
+      }
+    }
+}
+
+###
+
+DELETE http://localhost:3000/api/v1/bills/622f785147c82dc24896eb54 HTTP/1.1
+
+
+
